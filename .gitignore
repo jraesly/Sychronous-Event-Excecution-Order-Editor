@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Synchronous Event Order/bin/Debug
+/Synchronous Event Order/obj
+/.vs
+/packages
