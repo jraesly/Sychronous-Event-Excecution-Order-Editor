@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfMostRecentlyUsedItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <MostRecentlyUsedItem>
-    <PluginName>My First Plugin</PluginName>
-    <ConnectionId>00000000-0000-0000-0000-000000000000</ConnectionId>
-    <Date>2020-06-01T09:55:56.6238788-06:00</Date>
-  </MostRecentlyUsedItem>
-</ArrayOfMostRecentlyUsedItem>
