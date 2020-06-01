@@ -1,0 +1,47 @@
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Synchronous Event Order.dll.config
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Synchronous Event Order.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Synchronous Event Order.pdb
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\McTools.Xrm.Connection.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\McTools.Xrm.Connection.WinForms.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\microsoft.identitymodel.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Web.XmlTransform.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Sdk.Deployment.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Sdk.Workflow.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Tooling.Connector.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Tooling.CrmConnectControl.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Tooling.Ui.Styles.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Tooling.WebResourceUtility.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\NuGet.Core.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\ScintillaNET.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\XrmToolBox.AutoUpdater.exe
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\XrmToolBox.exe
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\XrmToolBox.Extensibility.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\XrmToolBox.PluginsStore.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.pdb
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Web.XmlTransform.pdb
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Sdk.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Sdk.Deployment.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Sdk.Workflow.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Tooling.Connector.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Tooling.CrmConnectControl.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Microsoft.Xrm.Tooling.WebResourceUtility.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\ScintillaNET.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\bin\Debug\XrmToolBox.PluginsStore.xml
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\obj\Debug\Synchronous Event Order.csprojAssemblyReference.cache
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\obj\Debug\Synchronous_Event_Order.MyPluginControl.resources
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\obj\Debug\Synchronous_Event_Order.Properties.Resources.resources
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\obj\Debug\Synchronous Event Order.csproj.GenerateResource.cache
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\obj\Debug\Synchronous Event Order.csproj.CoreCompileInputs.cache
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\obj\Debug\Synchronous Event Order.csproj.CopyComplete
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\obj\Debug\Synchronous Event Order.dll
+C:\Users\jrsg\source\repos\Synchronous Event Order\Synchronous Event Order\obj\Debug\Synchronous Event Order.pdb

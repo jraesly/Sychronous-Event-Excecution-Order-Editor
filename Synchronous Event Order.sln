@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synchronous Event Order", "Synchronous Event Order\Synchronous Event Order.csproj", "{DD3F3DDA-0EEB-4AE5-B6EB-6F60DFF31B7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD3F3DDA-0EEB-4AE5-B6EB-6F60DFF31B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3F3DDA-0EEB-4AE5-B6EB-6F60DFF31B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3F3DDA-0EEB-4AE5-B6EB-6F60DFF31B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3F3DDA-0EEB-4AE5-B6EB-6F60DFF31B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3D6FCE9-67E6-43F5-9424-8A9EF83E2CA3}
+	EndGlobalSection
+EndGlobal
