@@ -16,7 +16,7 @@ namespace Synchronous_Event_Order.Logic
             initialRank = Rank;
 
             // EntityLogicalName
-            var messageFilter = sdkMessageFilers.FirstOrDefault(
+            Entity messageFilter = sdkMessageFilers.FirstOrDefault(
                 s => pluginStep.GetAttributeValue<EntityReference>("sdkmessagefilterid") != null &&
                      s.Id == pluginStep.GetAttributeValue<EntityReference>("sdkmessagefilterid").Id);
             if (messageFilter != null)
@@ -25,7 +25,7 @@ namespace Synchronous_Event_Order.Logic
 
                 if (EntityLogicalName.Length == 0) EntityLogicalName = "None";
 
-                var message = sdkMessages.FirstOrDefault(
+                Entity message = sdkMessages.FirstOrDefault(
                     m => m.Id == messageFilter.GetAttributeValue<EntityReference>("sdkmessageid").Id);
                 if (message != null) Message = message.GetAttributeValue<string>("name");
             }
@@ -33,7 +33,7 @@ namespace Synchronous_Event_Order.Logic
             {
                 EntityLogicalName = "(none)";
 
-                var message = sdkMessages.FirstOrDefault(
+                Entity message = sdkMessages.FirstOrDefault(
                     m => m.Id == pluginStep.GetAttributeValue<EntityReference>("sdkmessageid").Id);
                 if (message != null) Message = message.GetAttributeValue<string>("name");
             }
@@ -73,7 +73,7 @@ namespace Synchronous_Event_Order.Logic
         public static IEnumerable<PluginStep> RetrievePluginSteps(IOrganizationService service,
             IEnumerable<Entity> sdkMessageFilers, IEnumerable<Entity> sdkMessages)
         {
-            var qe = new QueryExpression("sdkmessageprocessingstep")
+            QueryExpression qe = new QueryExpression("sdkmessageprocessingstep")
             {
                 ColumnSet = new ColumnSet(true),
                 Criteria =
@@ -108,7 +108,7 @@ namespace Synchronous_Event_Order.Logic
             // Define filter QEsdkmessageprocessingstep_sdkmessagefilter.LinkCriteria
             //QEsdkmessageprocessingstep_sdkmessagefilter.LinkCriteria.AddCondition("primaryobjecttypecode", ConditionOperator.Equal, 10037);
 
-            var steps = service.RetrieveMultiple(qe);
+            EntityCollection steps = service.RetrieveMultiple(qe);
 
             return steps.Entities.Select(e => new PluginStep(e, sdkMessageFilers, sdkMessages));
         }

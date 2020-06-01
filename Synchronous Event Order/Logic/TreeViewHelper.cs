@@ -17,7 +17,7 @@ namespace Synchronous_Event_Order.Logic
 
         public void AddSynchronousEvent(ISynchronousEvent sEvent)
         {
-            var entityNode = tv.Nodes.Find(sEvent.EntityLogicalName, false).ToList().SingleOrDefault();
+            TreeNode entityNode = tv.Nodes.Find(sEvent.EntityLogicalName, false).ToList().SingleOrDefault();
             if (entityNode == null)
             {
                 entityNode = new TreeNode(sEvent.EntityLogicalName)
@@ -25,7 +25,7 @@ namespace Synchronous_Event_Order.Logic
                 tv.Nodes.Add(entityNode);
             }
 
-            var messageNode = entityNode.Nodes.Find(sEvent.Message, false).ToList().SingleOrDefault();
+            TreeNode messageNode = entityNode.Nodes.Find(sEvent.Message, false).ToList().SingleOrDefault();
             if (messageNode == null)
             {
                 messageNode = new TreeNode(sEvent.Message)
@@ -33,11 +33,11 @@ namespace Synchronous_Event_Order.Logic
                 entityNode.Nodes.Add(messageNode);
             }
 
-            var stageNode = messageNode.Nodes.Find(sEvent.Stage.ToString(CultureInfo.InvariantCulture), false).ToList()
+            TreeNode stageNode = messageNode.Nodes.Find(sEvent.Stage.ToString(CultureInfo.InvariantCulture), false).ToList()
                 .SingleOrDefault();
             if (stageNode == null)
             {
-                var stageName = string.Empty;
+                string stageName = string.Empty;
                 switch (sEvent.Stage)
                 {
                     case 10:

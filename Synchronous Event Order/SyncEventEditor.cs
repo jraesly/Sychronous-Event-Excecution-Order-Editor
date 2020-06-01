@@ -11,13 +11,13 @@ using XrmToolBox.Extensibility;
 
 namespace Synchronous_Event_Order
 {
-    public partial class MyPluginControl : PluginControlBase
+    public partial class SyncEventEditor : PluginControlBase
     {
         private Settings mySettings;
         private List<ISynchronousEvent> events;
 
 
-        public MyPluginControl()
+        public SyncEventEditor()
         {
             InitializeComponent();
         }
@@ -56,7 +56,7 @@ namespace Synchronous_Event_Order
                 {
                     events = new List<ISynchronousEvent>();
 
-                    var filters =
+                    List<Entity> filters =
                         Service.RetrieveMultiple(new QueryExpression("sdkmessagefilter")
                         {
                             ColumnSet = new ColumnSet("sdkmessageid", "primaryobjecttypecode")
@@ -64,7 +64,7 @@ namespace Synchronous_Event_Order
 
                     bw.ReportProgress(0, "Loading SDK messages...");
 
-                    var messages = Service.RetrieveMultiple(new QueryExpression("sdkmessage")
+                    List<Entity> messages = Service.RetrieveMultiple(new QueryExpression("sdkmessage")
                     {
                         ColumnSet = new ColumnSet("name")
                     }).Entities.ToList();
@@ -75,7 +75,7 @@ namespace Synchronous_Event_Order
 
                     bw.ReportProgress(0, "Loading Synchronous workflows...");
 
-                    events.AddRange(SynchronousWorkflow.RetrievePluginSteps(Service));
+                    events.AddRange(SynchronousWorkflow.RetrieveWorkflowSteps(Service));
                 },
                 PostWorkCallBack = e =>
                 {
@@ -86,9 +86,9 @@ namespace Synchronous_Event_Order
                     }
                     else
                     {
-                        var tvh = new TreeViewHelper(tvEvents);
+                        TreeViewHelper tvh = new TreeViewHelper(tvEvents);
 
-                        foreach (var sEvent in events) tvh.AddSynchronousEvent(sEvent);
+                        foreach (ISynchronousEvent sEvent in events) tvh.AddSynchronousEvent(sEvent);
                     }
                 },
                 ProgressChanged = e =>
@@ -105,11 +105,11 @@ namespace Synchronous_Event_Order
 
             if (e.Node.Nodes.Count > 0) return;
 
-            var localEvents = (List<ISynchronousEvent>) e.Node.Tag;
+            List<ISynchronousEvent> localEvents = (List<ISynchronousEvent>) e.Node.Tag;
 
-            foreach (var sEvent in localEvents)
+            foreach (ISynchronousEvent sEvent in localEvents)
             {
-                var row = new DataGridViewRow
+                DataGridViewRow row = new DataGridViewRow
                 {
                     Tag = sEvent
                 };
@@ -128,9 +128,9 @@ namespace Synchronous_Event_Order
             if (dgvSynchronousEvent.Rows.Count == 0) return;
             dgvSynchronousEventRank.ValueType = typeof(int);
 
-            if (int.TryParse(dgvSynchronousEvent.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), out var rank))
+            if (int.TryParse(dgvSynchronousEvent.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), out int rank))
             {
-                var sEvent = (ISynchronousEvent) dgvSynchronousEvent.Rows[e.RowIndex].Tag;
+                ISynchronousEvent sEvent = (ISynchronousEvent) dgvSynchronousEvent.Rows[e.RowIndex].Tag;
                 sEvent.Rank = rank;
 
                 dgvSynchronousEvent.Sort(dgvSynchronousEvent.Columns[e.ColumnIndex], ListSortDirection.Ascending);
@@ -144,7 +144,7 @@ namespace Synchronous_Event_Order
 
         private void tsbUpdate_Click(object sender, EventArgs e)
         {
-            var updatedEvents = events.Where(ev => ev.HasChanged);
+            IEnumerable<ISynchronousEvent> updatedEvents = events.Where(ev => ev.HasChanged);
 
             if (updatedEvents.Any(ev => ev.Type == "Workflow") && DialogResult.No ==
                 MessageBox.Show(ParentForm,
@@ -157,7 +157,7 @@ namespace Synchronous_Event_Order
                 Message = "Updating...",
                 Work = (bw, evt) =>
                 {
-                    foreach (var sEvent in events.Where(ev => ev.HasChanged))
+                    foreach (ISynchronousEvent sEvent in events.Where(ev => ev.HasChanged))
                     {
                         bw.ReportProgress(0, string.Format("Updating {0} {1}", sEvent.Type, sEvent.Name));
                         sEvent.UpdateRank(Service);
