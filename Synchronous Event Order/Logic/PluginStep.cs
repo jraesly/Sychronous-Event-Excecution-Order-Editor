@@ -7,13 +7,13 @@ namespace Synchronous_Event_Order.Logic
 {
     internal class PluginStep : ISynchronousEvent
     {
-        private readonly Entity pluginStep;
-        private int initialRank;
+        private readonly Entity _pluginStep;
+        private int _initialRank;
 
         public PluginStep(Entity pluginStep, IEnumerable<Entity> sdkMessageFilers, IEnumerable<Entity> sdkMessages)
         {
-            this.pluginStep = pluginStep;
-            initialRank = Rank;
+            this._pluginStep = pluginStep;
+            _initialRank = Rank;
 
             // EntityLogicalName
             Entity messageFilter = sdkMessageFilers.FirstOrDefault(
@@ -41,32 +41,32 @@ namespace Synchronous_Event_Order.Logic
 
         public int Rank
         {
-            get => pluginStep.GetAttributeValue<int>("rank");
-            set => pluginStep["rank"] = value;
+            get => _pluginStep.GetAttributeValue<int>("rank");
+            set => _pluginStep["rank"] = value;
         }
 
         public string EntityLogicalName { get; }
 
-        public int Stage => pluginStep.GetAttributeValue<OptionSetValue>("stage").Value;
+        public int Stage => _pluginStep.GetAttributeValue<OptionSetValue>("stage").Value;
 
         public string Message { get; }
 
-        public string Name => pluginStep.GetAttributeValue<string>("name");
+        public string Name => _pluginStep.GetAttributeValue<string>("name");
 
-        public string Description => pluginStep.GetAttributeValue<string>("description");
-        public string UpdateAttributes => pluginStep.GetAttributeValue<string>("filteringattributes");
+        public string Description => _pluginStep.GetAttributeValue<string>("description");
+        public string UpdateAttributes => _pluginStep.GetAttributeValue<string>("filteringattributes");
 
         public void UpdateRank(IOrganizationService service)
         {
             if (HasChanged)
             {
-                service.Update(pluginStep);
-                initialRank = pluginStep.GetAttributeValue<int>("rank");
+                service.Update(_pluginStep);
+                _initialRank = _pluginStep.GetAttributeValue<int>("rank");
             }
         }
 
 
-        public bool HasChanged => initialRank != Rank;
+        public bool HasChanged => _initialRank != Rank;
 
         public string Type => "Plugin step";
 

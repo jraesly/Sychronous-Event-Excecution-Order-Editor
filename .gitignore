@@ -7,3 +7,5 @@
 /.vs
 /packages
 /Synchronous Event Order/Synchronous Event Order.csproj.user
+/Synchronous Event Order/Synchronous Event Order.csproj.DotSettings.user
+/Synchronous Event Order.sln.DotSettings.user

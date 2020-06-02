@@ -71,6 +71,25 @@ namespace Synchronous_Event_Order.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Question.
+        /// </summary>
+        internal static string SyncEventEditor_tsbUpdate_Click_Question {
+            get {
+                return ResourceManager.GetString("SyncEventEditor_tsbUpdate_Click_Question", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Workflows will be deactivated, updated, then activated back. Are you sure you want to continue?.
+        /// </summary>
+        internal static string SyncEventEditor_tsbUpdate_Click_Workflows_will_be_deactivated__updated__then_activated_back__Are_you_sure_you_want_to_continue_ {
+            get {
+                return ResourceManager.GetString("SyncEventEditor_tsbUpdate_Click_Workflows_will_be_deactivated__updated__then_acti" +
+                        "vated_back__Are_you_sure_you_want_to_continue_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap tsbClose_Image {
