@@ -75,17 +75,7 @@ namespace Synchronous_Event_Order.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap tsbClose_Image {
             get {
-                object obj = ResourceManager.GetObject("tsbClose_Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap tsbLoadEvents_Image {
-            get {
-                object obj = ResourceManager.GetObject("tsbLoadEvents.Image", resourceCulture);
+                object obj = ResourceManager.GetObject("tsbClose.Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +85,7 @@ namespace Synchronous_Event_Order.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap tsbUpdate_Image {
             get {
-                object obj = ResourceManager.GetObject("tsbUpdate_Image", resourceCulture);
+                object obj = ResourceManager.GetObject("tsbUpdate.Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -33,7 +33,7 @@
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbUpdate = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.ilEventTreeNode = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tvEvents = new System.Windows.Forms.TreeView();
@@ -44,6 +44,7 @@
             this.dgvSynchronousDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UpdateAttributes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsbLoadEvents = new System.Windows.Forms.ToolStripButton();
+            this.tsbUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -60,7 +61,8 @@
             this.toolStripSeparator2,
             this.tsbLoadEvents,
             this.toolStripSeparator1,
-            this.tsbUpdate});
+            this.tsbUpdate,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
@@ -88,14 +90,13 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 42);
             // 
-            // tsbUpdate
+            // toolStripButton1
             // 
-            this.tsbUpdate.Image = global::Synchronous_Event_Order.Properties.Resources.tsbUpdate_Image;
-            this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbUpdate.Name = "tsbUpdate";
-            this.tsbUpdate.Size = new System.Drawing.Size(218, 36);
-            this.tsbUpdate.Text = "Apply update(s)";
-            this.tsbUpdate.Click += new System.EventHandler(this.tsbUpdate_Click);
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(46, 36);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // ilEventTreeNode
             // 
@@ -157,7 +158,7 @@
             this.dgvSynchronousEvent.Name = "dgvSynchronousEvent";
             this.dgvSynchronousEvent.RowHeadersWidth = 82;
             this.dgvSynchronousEvent.RowTemplate.Height = 24;
-            this.dgvSynchronousEvent.Size = new System.Drawing.Size(965, 904);
+            this.dgvSynchronousEvent.Size = new System.Drawing.Size(961, 904);
             this.dgvSynchronousEvent.TabIndex = 0;
             this.dgvSynchronousEvent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSynchronousEvent_CellContentClick);
             this.dgvSynchronousEvent.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSynchronousEvent_CellValueChanged);
@@ -211,6 +212,15 @@
             this.tsbLoadEvents.Text = "Load events";
             this.tsbLoadEvents.Click += new System.EventHandler(this.tsbLoadEvents_Click);
             // 
+            // tsbUpdate
+            // 
+            this.tsbUpdate.Image = global::Synchronous_Event_Order.Properties.Resources.tsbUpdate_Image;
+            this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbUpdate.Name = "tsbUpdate";
+            this.tsbUpdate.Size = new System.Drawing.Size(218, 36);
+            this.tsbUpdate.Text = "Apply update(s)";
+            this.tsbUpdate.Click += new System.EventHandler(this.tsbUpdate_Click);
+            // 
             // SyncEventEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -250,5 +260,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSynchronousEventName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSynchronousDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn UpdateAttributes;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
