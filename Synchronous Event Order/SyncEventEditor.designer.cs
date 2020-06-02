@@ -1,4 +1,6 @@
-﻿namespace Synchronous_Event_Order
+﻿using System;
+
+namespace Synchronous_Event_Order
 {
     partial class SyncEventEditor
     {
@@ -231,6 +233,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "SyncEventEditor";
             this.Size = new System.Drawing.Size(1462, 956);
+            this.Load += new EventHandler(this.MyPluginControl_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);

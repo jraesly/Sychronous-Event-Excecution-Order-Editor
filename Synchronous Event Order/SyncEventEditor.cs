@@ -15,6 +15,14 @@ namespace Synchronous_Event_Order
 {
     public partial class SyncEventEditor : PluginControlBase, IPayPalPlugin
     {
+        // Public Properties
+        public string DonationDescription => "Synchronous Event Execution Order Editor Fan Club!";
+        public string EmailAccount => "jlax58@gmail.com";
+
+        // Private Properties
+        private List<ISynchronousEvent> _events;
+        private Settings _mySettings;
+
         public SyncEventEditor()
         {
             InitializeComponent();
@@ -22,8 +30,7 @@ namespace Synchronous_Event_Order
 
         private void MyPluginControl_Load(object sender, EventArgs e)
         {
-            ShowInfoNotification("This is a notification that can lead to XrmToolBox repository",
-                new Uri("https://github.com/MscrmTools/XrmToolBox"));
+            // ShowInfoNotification("This is a notification that can lead to XrmToolBox repository",new Uri("https://github.com/MscrmTools/XrmToolBox"));
 
             // Loads or creates the settings for the plugin
             if (!SettingsManager.Instance.TryLoad(GetType(), out _mySettings))
@@ -138,7 +145,7 @@ namespace Synchronous_Event_Order
 
             if (int.TryParse(dgvSynchronousEvent.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), out var rank))
             {
-                var sEvent = (ISynchronousEvent) dgvSynchronousEvent.Rows[e.RowIndex].Tag;
+                var sEvent = (ISynchronousEvent)dgvSynchronousEvent.Rows[e.RowIndex].Tag;
                 sEvent.Rank = rank;
 
                 dgvSynchronousEvent.Sort(dgvSynchronousEvent.Columns[e.ColumnIndex], ListSortDirection.Ascending);
@@ -246,16 +253,5 @@ namespace Synchronous_Event_Order
         private void dgvSynchronousEvent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
-    }
-
-    public partial class SyncEventEditor
-    {
-        // Public Properties
-        public string DonationDescription => "Synchronous Event Execution Order Editor Fan Club!";
-        public string EmailAccount => "jlax58@gmail.com";
-
-        // Private Properties
-        private List<ISynchronousEvent> _events;
-        private Settings _mySettings;
     }
 }
