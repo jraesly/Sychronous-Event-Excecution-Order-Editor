@@ -7,22 +7,22 @@ namespace Synchronous_Event_Order.Logic
 {
     internal class TreeViewHelper
     {
-        private readonly TreeView tv;
+        private readonly TreeView _tv;
 
         public TreeViewHelper(TreeView tv)
         {
-            this.tv = tv;
+            this._tv = tv;
             tv.Sorted = true;
         }
 
         public void AddSynchronousEvent(ISynchronousEvent sEvent)
         {
-            TreeNode entityNode = tv.Nodes.Find(sEvent.EntityLogicalName, false).ToList().SingleOrDefault();
+            TreeNode entityNode = _tv.Nodes.Find(sEvent.EntityLogicalName, false).ToList().SingleOrDefault();
             if (entityNode == null)
             {
                 entityNode = new TreeNode(sEvent.EntityLogicalName)
                     {ImageIndex = 0, SelectedImageIndex = 0, Name = sEvent.EntityLogicalName};
-                tv.Nodes.Add(entityNode);
+                _tv.Nodes.Add(entityNode);
             }
 
             TreeNode messageNode = entityNode.Nodes.Find(sEvent.Message, false).ToList().SingleOrDefault();
