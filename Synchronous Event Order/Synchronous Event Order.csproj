@@ -136,11 +136,6 @@
     <Compile Include="Logic\PluginStep.cs" />
     <Compile Include="Logic\SynchronousWorkflow.cs" />
     <Compile Include="Logic\TreeViewHelper.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="SyncEventExecutionOrderPlugin.cs" />
     <Compile Include="SyncEventEditor.cs">
       <SubType>UserControl</SubType>
@@ -149,6 +144,11 @@
       <DependentUpon>SyncEventEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -157,16 +157,19 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SyncEventEditor.resx">
       <DependentUpon>SyncEventEditor.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\CDS.png" />
+    <Content Include="Resources\tsbClose.Image.png" />
+    <Content Include="Resources\tsbUpdate.Image.png" />
+    <None Include="Resources\tsbLoadEvents.Image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

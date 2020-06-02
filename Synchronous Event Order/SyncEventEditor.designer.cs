@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SyncEventEditor));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbLoadEvents = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbUpdate = new System.Windows.Forms.ToolStripButton();
             this.ilEventTreeNode = new System.Windows.Forms.ImageList(this.components);
@@ -45,6 +43,7 @@
             this.dgvSynchronousEventName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSynchronousDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UpdateAttributes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tsbLoadEvents = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -72,7 +71,7 @@
             // tsbClose
             // 
             this.tsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
+            this.tsbClose.Image = global::Synchronous_Event_Order.Properties.Resources.tsbClose_Image;
             this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClose.Name = "tsbClose";
             this.tsbClose.Size = new System.Drawing.Size(46, 36);
@@ -84,15 +83,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
             // 
-            // tsbLoadEvents
-            // 
-            this.tsbLoadEvents.Image = ((System.Drawing.Image)(resources.GetObject("tsbLoadEvents.Image")));
-            this.tsbLoadEvents.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbLoadEvents.Name = "tsbLoadEvents";
-            this.tsbLoadEvents.Size = new System.Drawing.Size(179, 36);
-            this.tsbLoadEvents.Text = "Load events";
-            this.tsbLoadEvents.Click += new System.EventHandler(this.tsbLoadEvents_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -100,7 +90,7 @@
             // 
             // tsbUpdate
             // 
-            this.tsbUpdate.Image = ((System.Drawing.Image)(resources.GetObject("tsbUpdate.Image")));
+            this.tsbUpdate.Image = global::Synchronous_Event_Order.Properties.Resources.tsbUpdate_Image;
             this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbUpdate.Name = "tsbUpdate";
             this.tsbUpdate.Size = new System.Drawing.Size(218, 36);
@@ -143,7 +133,7 @@
             this.tvEvents.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.tvEvents.Name = "tvEvents";
             this.tvEvents.SelectedImageIndex = 0;
-            this.tvEvents.Size = new System.Drawing.Size(473, 926);
+            this.tvEvents.Size = new System.Drawing.Size(473, 902);
             this.tvEvents.TabIndex = 1;
             this.tvEvents.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvEvents_AfterSelect);
             // 
@@ -167,7 +157,7 @@
             this.dgvSynchronousEvent.Name = "dgvSynchronousEvent";
             this.dgvSynchronousEvent.RowHeadersWidth = 82;
             this.dgvSynchronousEvent.RowTemplate.Height = 24;
-            this.dgvSynchronousEvent.Size = new System.Drawing.Size(963, 904);
+            this.dgvSynchronousEvent.Size = new System.Drawing.Size(965, 904);
             this.dgvSynchronousEvent.TabIndex = 0;
             this.dgvSynchronousEvent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSynchronousEvent_CellContentClick);
             this.dgvSynchronousEvent.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSynchronousEvent_CellValueChanged);
@@ -212,6 +202,15 @@
             this.UpdateAttributes.ReadOnly = true;
             this.UpdateAttributes.Width = 200;
             // 
+            // tsbLoadEvents
+            // 
+            this.tsbLoadEvents.Image = global::Synchronous_Event_Order.Properties.Resources.CDS;
+            this.tsbLoadEvents.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLoadEvents.Name = "tsbLoadEvents";
+            this.tsbLoadEvents.Size = new System.Drawing.Size(179, 36);
+            this.tsbLoadEvents.Text = "Load events";
+            this.tsbLoadEvents.Click += new System.EventHandler(this.tsbLoadEvents_Click);
+            // 
             // SyncEventEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -240,16 +239,16 @@
         private System.Windows.Forms.ImageList ilEventTreeNode;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TreeView tvEvents;
+        private System.Windows.Forms.ToolStripButton tsbLoadEvents;
         private System.Windows.Forms.DataGridView dgvSynchronousEvent;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton tsbUpdate;
+        private System.Windows.Forms.ToolStripButton tsbClose;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSynchronousEventRank;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSynchronousEventType;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSynchronousEventName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSynchronousDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn UpdateAttributes;
-        private System.Windows.Forms.ToolStripButton tsbClose;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton tsbUpdate;
-        private System.Windows.Forms.ToolStripButton tsbLoadEvents;
     }
 }
