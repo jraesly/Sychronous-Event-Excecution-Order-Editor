@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Synchronous Event Order")]
+[assembly: AssemblyTitle("Synchronous Event Execution Order Editor")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Chevron")]
-[assembly: AssemblyProduct("Synchronous Event Order")]
-[assembly: AssemblyCopyright("Copyright © Chevron 2020")]
+[assembly: AssemblyCompany("John Raesly")]
+[assembly: AssemblyProduct("Synchronous Event Execution Order Editor")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
