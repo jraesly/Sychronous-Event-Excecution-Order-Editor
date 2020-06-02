@@ -32,8 +32,11 @@ namespace Synchronous_Event_Order
         {
             this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbLoadEvents = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.ilEventTreeNode = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -44,9 +47,6 @@ namespace Synchronous_Event_Order
             this.dgvSynchronousEventName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSynchronousDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UpdateAttributes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tsbClose = new System.Windows.Forms.ToolStripButton();
-            this.tsbLoadEvents = new System.Windows.Forms.ToolStripButton();
-            this.tsbUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -72,22 +72,50 @@ namespace Synchronous_Event_Order
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // tsbClose
+            // 
+            this.tsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbClose.Image = global::Synchronous_Event_Order.Properties.Resources.tsbClose_Image;
+            this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbClose.Name = "tsbClose";
+            this.tsbClose.Size = new System.Drawing.Size(46, 44);
+            this.tsbClose.Text = "Close this tool";
+            this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 50);
+            // 
+            // tsbLoadEvents
+            // 
+            this.tsbLoadEvents.Image = global::Synchronous_Event_Order.Properties.Resources.CDS;
+            this.tsbLoadEvents.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLoadEvents.Name = "tsbLoadEvents";
+            this.tsbLoadEvents.Size = new System.Drawing.Size(225, 44);
+            this.tsbLoadEvents.Text = "Load events (F5)";
+            this.tsbLoadEvents.Click += new System.EventHandler(this.tsbLoadEvents_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 42);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 50);
+            // 
+            // tsbUpdate
+            // 
+            this.tsbUpdate.Image = global::Synchronous_Event_Order.Properties.Resources.tsbUpdate_Image;
+            this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbUpdate.Name = "tsbUpdate";
+            this.tsbUpdate.Size = new System.Drawing.Size(218, 44);
+            this.tsbUpdate.Text = "Apply update(s)";
+            this.tsbUpdate.Click += new System.EventHandler(this.tsbUpdate_Click);
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(46, 36);
+            this.toolStripButton1.Size = new System.Drawing.Size(46, 44);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // ilEventTreeNode
@@ -150,7 +178,7 @@ namespace Synchronous_Event_Order
             this.dgvSynchronousEvent.Name = "dgvSynchronousEvent";
             this.dgvSynchronousEvent.RowHeadersWidth = 82;
             this.dgvSynchronousEvent.RowTemplate.Height = 24;
-            this.dgvSynchronousEvent.Size = new System.Drawing.Size(961, 896);
+            this.dgvSynchronousEvent.Size = new System.Drawing.Size(959, 896);
             this.dgvSynchronousEvent.TabIndex = 0;
             this.dgvSynchronousEvent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSynchronousEvent_CellContentClick);
             this.dgvSynchronousEvent.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSynchronousEvent_CellValueChanged);
@@ -195,34 +223,6 @@ namespace Synchronous_Event_Order
             this.UpdateAttributes.ReadOnly = true;
             this.UpdateAttributes.Width = 200;
             // 
-            // tsbClose
-            // 
-            this.tsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbClose.Image = global::Synchronous_Event_Order.Properties.Resources.tsbClose_Image;
-            this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Size = new System.Drawing.Size(46, 36);
-            this.tsbClose.Text = "Close this tool";
-            this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
-            // 
-            // tsbLoadEvents
-            // 
-            this.tsbLoadEvents.Image = global::Synchronous_Event_Order.Properties.Resources.CDS;
-            this.tsbLoadEvents.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbLoadEvents.Name = "tsbLoadEvents";
-            this.tsbLoadEvents.Size = new System.Drawing.Size(225, 44);
-            this.tsbLoadEvents.Text = "Load events (F5)";
-            this.tsbLoadEvents.Click += new System.EventHandler(this.tsbLoadEvents_Click);
-            // 
-            // tsbUpdate
-            // 
-            this.tsbUpdate.Image = global::Synchronous_Event_Order.Properties.Resources.tsbUpdate_Image;
-            this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbUpdate.Name = "tsbUpdate";
-            this.tsbUpdate.Size = new System.Drawing.Size(218, 36);
-            this.tsbUpdate.Text = "Apply update(s)";
-            this.tsbUpdate.Click += new System.EventHandler(this.tsbUpdate_Click);
-            // 
             // SyncEventEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -233,7 +233,7 @@ namespace Synchronous_Event_Order
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "SyncEventEditor";
             this.Size = new System.Drawing.Size(1462, 956);
-            this.Load += new EventHandler(this.MyPluginControl_Load);
+            this.Load += new System.EventHandler(this.MyPluginControl_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);

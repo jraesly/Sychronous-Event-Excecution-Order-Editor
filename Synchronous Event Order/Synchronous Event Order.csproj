@@ -177,6 +177,12 @@
   <ItemGroup>
     <None Include="Resources\sync.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync_80x80.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>IF $(ConfigurationName) == Debug (
