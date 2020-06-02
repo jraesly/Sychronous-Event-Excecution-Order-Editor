@@ -141,6 +141,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SyncEventEditor.designer.cs">
+      <DependentUpon>SyncEventEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="SyncEventExecutionOrderPlugin.cs" />
     <Compile Include="SyncEventEditor.cs">
       <SubType>UserControl</SubType>
