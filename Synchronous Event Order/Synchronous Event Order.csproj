@@ -160,9 +160,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SyncEventEditor.resx">
+      <DependentUpon>SyncEventEditor.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\CDS.png" />
     <Content Include="Resources\tsbClose.Image.png" />
     <Content Include="Resources\tsbUpdate.Image.png" />
     <None Include="Resources\tsbLoadEvents.Image.png" />
